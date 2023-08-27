@@ -1,0 +1,75 @@
+# *******Skillrack_Dialy_Challenge_10*******
+
+#Program to Remove Vowels using only function.
+
+#Question:
+Remove Vowels 
+
+You must implement the function removeVowels which accepts a string value str as the input. The function removeVowels must remove both upper and lower case vowels from the input string str. The string str will contain atleast 1 consonant. 
+
+Example Input/Output 1: 
+
+Input: 
+
+Environment 
+
+Output: 
+
+nvrnmnt
+
+Explanation: 
+
+In the string Environment, 'E', 'i', 'o' and 'e' are vowels. 
+After removing the vowels, the string becomes nvrnmnt. 
+Hence the output is nvrnmnt 
+
+Example Input/Output 2: 
+
+Input:
+
+sky
+
+Output: 
+
+sky
+
+
+#Answer:
+
+#include <stdio.h>
+
+#include <string.h>
+
+int isVowel(char c) 
+{
+
+    return (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U');
+
+}
+
+void removeVowels(char *str) 
+
+{
+    int len = strlen(str);
+
+    int dest = 0; // Index for the modified string without vowels
+    
+    for (int src = 0; src < len; src++) 
+
+{
+        if (!isVowel(str[src])) 
+
+{
+
+            str[dest] = str[src];
+
+            dest++;
+        }
+
+    }
+    
+    str[dest] = '\0'; // Terminate the modified string
+
+}
+
+#Skillrack_Dialy_Challenge_10
